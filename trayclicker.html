@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1 {
+                text-align: center;
+                color: #990000;
+                font-family: cursive;
+                font-size: 100px;
+            }
+            h2 {
+                text-align: center;
+                color: #990000;
+                font-family: cursive;
+                font-size: 150px;
+            }
+            h3 {
+                text-align: center;
+                color: #990000;
+                font-family: cursive;  
+            }
+            body {
+            background-image: url("https://i.scdn.co/image/ab6761610000e5ebf9afc2452be2587dbef5e1c8");
+            }
+            img {
+                margin:auto;
+                display: block;
+            }
+            .image-button {
+             width: 1000px;
+             height: 1000px;
+             background-image: url(
+           'https://yt3.googleusercontent.com/R2XtI9a1IjG_PelzDKd_wizDYQTKXCZ4W49FpguH1NkXDIh-76e1DbfLmaIY_Dr_hOZ8Qwia=s900-c-k-c0x00ffffff-no-rj');
+             background-size: cover;
+             border: none;
+             cursor: pointer;
+             display: block;
+          }
+          button {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #990000;
+            border-radius: 24px;
+            border: none;
+            color: #FFFFFF;
+            display: block;
+            font-family: cursive;
+            font-size: 30px;
+            }
+          
+
+        </style>
+    </head>
+
+    <body>
+        <h1 id="title">TRAY TOVEN CLICKER</h1>
+        <button id="flag" class="image-button" onclick="flag()" ></button>
+        <h2 id="clicksAmmount">0 STREAMS</h2>
+        <h2>🛒 STORE 🛒</h2>
+        <h1>🪙 MONEYMAKERZ 🪙</h1>
+        <button id="squirrel" onclick="squirrel()">🎵 RELEASE SINGLE, 10$: 0</button>
+        <h3></h3>
+        <button id="grandmother" onclick="grandma()">🎧 RELEASE EP, 250$: 0</button>
+        <h3></h3>
+        <button id="polkaband" onclick="polka()">🔥 RELEASE DISS, 1,000$: 0</button>
+        <h3></h3>
+        <button id="smalltown" onclick="town()">💿 RELEASE ALBUM, 50,000$: 0</button>
+        <h3></h3>
+        <button id="city" onclick="city()">🛢️ FREAK PARTY, 2,500,000: 0</button>
+        <h3></h3>
+        <h1>⬆️ UPGRADEZ ⬆️</h1>
+        <button onclick="nutTree()">🎵 SINGLE: ADD FEATURES, 100$</button>
+        <h3 id="ntm">CHANCE OF MULT: 1 IN 1</h3>
+        <button onclick="flour()">🎧 EP: PUSH ADVERTISEMENT, 500$</button>
+        <h3 id="qfm">CHANCE OF MULT: 1 IN 1</h3>
+        <button onclick="banger()">🔥 DISS: ADD FLAMING INSULTS, 10,000$</button>
+        <h3 id="bgm">CHANCE OF MULT: 1 IN 1</h3>
+        <button onclick="taxes()">💿 ALBUM: ADD EXTRA SONGS, 200,000$</button>
+        <h3 id="txm">CHANCE OF MULT: 1 IN 1</h3>
+        <button onclick="ctaxes()">🛢️ EXTRA OIL, 4,000,000$</button>
+        <h3 id="ctm">CHANCE OF MULT: 1 IN 1</h3>
+        <script>
+            let clicks = 0
+            let mult = 1
+            let sqs = 0
+            let gms = 0
+            let pbs = 0
+            let sts = 0
+            let bcs = 0
+            let sqm = 1
+            let gmm = 1
+            let pbm = 1
+            let stm = 1
+            let bcm = 1            
+            function clicked(mult) {
+            clicks = clicks + 1 * mult;
+            document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS";
+            }
+            function flag() {
+            var audio = new Audio('https://github.com/TrayTovenClicker/TrayTovenClicker.github.io/blob/main/pluh%20(3).mp3?raw=true');
+            audio.play();
+            clicked(1);
+            }
+            function squirrel() {
+                if (clicks>=10) {
+                clicks = clicks - 10
+                sqs++;
+                document.getElementById('squirrel').innerHTML = "🎵 RELEASE SINGLE, 10$: " + sqs;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS";
+                sqr()
+            }};
+            function grandma() {
+                if (clicks>=250) {
+                clicks = clicks - 250
+                gms++;
+                document.getElementById('grandmother').innerHTML = "🎧 RELEASE EP, 250$: " + gms;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS";
+                gm()
+            }};
+            function polka() {
+                if (clicks>=1000) {
+                clicks = clicks - 1000
+                pbs++;
+                document.getElementById('polkaband').innerHTML = "🔥 RELEASE DISS, 1,000$: " + pbs;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS";
+                plk()
+            }};
+            function town() {
+                if (clicks>=50000) {
+                clicks = clicks - 50000
+                sts++;
+                document.getElementById('smalltown').innerHTML = "💿 RELEASE ALBUM, 50,000$: " + sts;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS";
+                twn()
+            }};
+            function city() {
+                if (clicks>=2500000) {
+                clicks = clicks - 2500000
+                bcs++;
+                document.getElementById('city').innerHTML = "🛢️ FREAK PARTY, 2,500,000: " + bcs;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS";
+                cty()
+            }};      
+        </script>
+        <script>
+            function sqr() {
+            setInterval(function () {clicked(Math.floor((Math.random() * sqm)+1))}, 10000)
+            } 
+            function gm() {
+            setInterval(function () {clicked(Math.floor((Math.random() * gmm)+1))}, 5000)
+            } 
+            function plk() {
+            setInterval(function () {clicked(Math.floor((Math.random() * pbm)+1))}, 1000)
+            } 
+            function twn() {
+            setInterval(function () {clicked(Math.floor((Math.random() * stm)+1))}, 500)
+            } 
+            function cty() {
+            setInterval(function () {clicked(Math.floor((Math.random() * bcm)+1))}, 100)
+            } 
+        </script>
+        <script>
+            function nutTree() {
+                if (clicks>=100) {
+                clicks = clicks - 100
+                sqm++;
+                document.getElementById('ntm').innerHTML = "CHANCE OF MULT: 1 IN " + sqm;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS"
+                }};
+            function flour() {
+                if (clicks>=500) {
+                clicks = clicks - 500
+                gmm++;
+                document.getElementById('qfm').innerHTML = "CHANCE OF MULT: 1 IN " + gmm;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS"
+                }};    
+                function banger() {
+                if (clicks>=10000) {
+                clicks = clicks - 10000
+                pbm++;
+                document.getElementById('bgm').innerHTML = "CHANCE OF MULT: 1 IN " + pbm;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS"
+                }};    
+                function taxes() {
+                if (clicks>=200000) {
+                clicks = clicks - 200000
+                stm++;
+                document.getElementById('txm').innerHTML = "CHANCE OF MULT: 1 IN " + stm;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS"
+                }};
+                function ctaxes() {
+                if (clicks>=4000000) {
+                clicks = clicks - 4000000
+                bcm++;
+                document.getElementById('ctm').innerHTML = "CHANCE OF MULT: 1 IN " + bcm;
+                document.getElementById('clicksAmmount').innerHTML = clicks + " STREAMS"
+                }};    
+        </script>
+    </body>
+</html>
